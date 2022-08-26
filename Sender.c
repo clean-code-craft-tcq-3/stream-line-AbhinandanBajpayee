@@ -1,4 +1,4 @@
-#include "sender.h"
+#include "Sender.h"
 
 void displayOnConsole(float tempData, float socData)
 {

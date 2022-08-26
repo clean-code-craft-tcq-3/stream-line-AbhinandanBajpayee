@@ -4,7 +4,7 @@
 #include "test/catch.hpp"
 #include <time.h>
 #include <stdlib.h>
-#include "sender.h"
+#include "Sender.h"
 
 sensorThresholdValues tempthresoldValues = {.maximumValue = 45.0, .minimumValue=10.0};
 sensorThresholdValues socthresoldValues = {.maximumValue = 80.0, .minimumValue=20.0};

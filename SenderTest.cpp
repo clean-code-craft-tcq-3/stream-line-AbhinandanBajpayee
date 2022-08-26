@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN 
 
 
-#include "test/catch.hpp"
+#include "catch.hpp"
 #include <time.h>
 #include <stdlib.h>
 #include "Sender.h"

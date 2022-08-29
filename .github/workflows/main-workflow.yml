@@ -16,7 +16,7 @@ jobs:
       run: ./testchecker
     
     - name: build receiver
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage  -o GeneratedReceiver RECEIVER/*.c*
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage  -o GeneratedReceiver Receiver/*.c*
       
     - name: run sender | receiver
       run: ./testchecker | ./GeneratedReceiver

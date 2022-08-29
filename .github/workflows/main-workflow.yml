@@ -1,0 +1,28 @@
+name: Build and Run
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: install coverage tool
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcovr
+        
+    - name: build
+      run: g++ -Wall -Wextra -o testchecker *.c*
+      
+    - name: run
+      run: ./testchecker
+    
+    - name: build receiver
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage  -o GeneratedReceiver Receiver/*.c*
+      
+    - name: run sender | receiver
+      run: ./testchecker | ./GeneratedReceiver

@@ -57,6 +57,9 @@ int findMaxValue(int * input,int noOfElements)
 		if( maxValue < input[i] )
 		  maxValue = input[i];
 	}
+ 
+ 	printf("Maximum value is %f \n",maxValue);
+ 
 	return maxValue;
 }
 
@@ -68,6 +71,7 @@ int findMinValue(int * input,int noOfElements)
 		if( minValue > input[i] )
 		  minValue = input[i];
 	}
+ printf("Minimum value is %f \n",minValue);
 return minValue;
 }
 
@@ -81,7 +85,8 @@ int	startIndex = noOfElements - NO_OF_CONSECUTIVE_AVERAGE ;
 	   
 		total += input[i];
 	}
-
+		
+	printf(" Simple Moving Average is %f\n",(total/NO_OF_CONSECUTIVE_AVERAGE));
 	return (total/NO_OF_CONSECUTIVE_AVERAGE);
 }
 

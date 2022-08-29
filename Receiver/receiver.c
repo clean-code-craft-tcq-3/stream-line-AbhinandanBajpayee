@@ -27,7 +27,7 @@ void collectTempData(char consoleData[NOOFDATA][20], int tempData[NOOFDATA], int
 {
     for (int i = 0; i < size; i++)
     {
-        char *tempDataString = strtok(consoleData[i], ",");
+        strtok(consoleData[i], ",");
         tempData[i]  =  atoi(strtok(NULL, ","));
         
     }
